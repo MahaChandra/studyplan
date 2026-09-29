@@ -1,0 +1,530 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef4ff;
+  color: #172d52;
+}
+
+
+
+.app {
+  min-height: 100vh;
+  padding: 18px;
+}
+
+
+/* header */
+
+
+
+.header {
+  background-color: #4f46e5;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+}
+
+.header p {
+  margin: 8px 0 0;
+  font-size: 22px;
+}
+
+
+/* container */
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+
+/* study-form */
+
+.study-form {
+  background: white;
+  border-radius: 12px;
+  padding: 26px 32px 30px;
+  margin-bottom: 20px;
+  box-shadow:
+    0 5px 20px rgba(70, 100, 160, 0.10);
+}
+
+
+.form-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+
+.form-title h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #172d52;
+}
+
+
+.plus-circle {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: #3865d8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+
+.form-fields {
+  display: grid;
+  grid-template-columns:
+    1fr 1fr 1fr;
+  gap: 22px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 9px;
+  color: #172d52;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+  width: 100%;
+  border: 2px solid #d4e1fa;
+  border-radius: 9px;
+  padding: 13px 17px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
+
+
+.form-group input {
+  height: 47px;
+}
+
+
+.form-group textarea {
+  height: 75px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #5c7fe0;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #91a3c1;
+}
+
+
+/* Add button */
+
+.add-button {
+  margin-top: 22px;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+
+  background: linear-gradient(
+    135deg,
+    #4f5ee8,
+    #506de0
+  );
+
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 4px 10px rgba(70, 90, 220, 0.25);
+}
+
+
+.add-button span {
+  font-size: 25px;
+  margin-right: 8px;
+}
+
+
+.add-button:hover {
+  transform: translateY(-1px);
+}
+
+
+/*  stydylist */
+
+.study-list {
+
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow:
+    0 4px 15px rgba(70, 100, 160, 0.05);
+}
+
+
+.list-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+
+.list-title h2 {
+  margin: 0;
+  font-size: 27px;
+  color: #172d52;
+}
+
+
+.book-small img {
+  width: 45px;
+  height: 45px;
+ margin: 5px 0 0;
+}
+
+
+.total {
+  margin-left: auto;
+  background: #e9ecff;
+  color: #5364d4;
+  font-weight: 700;
+  padding: 8px 17px;
+  border-radius: 20px;
+}
+
+
+.study-grid {
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+  gap: 25px;
+}
+
+
+/* study card */
+
+.study-card {
+
+  background: white;
+  border: 2px solid #d6e5ff;
+  border-radius: 11px;
+  overflow: hidden;
+
+  box-shadow:
+    0 3px 10px rgba(60, 90, 150, 0.08);
+}
+
+
+.study-card.completed-card {
+
+  border-color: #b7eadc;
+
+}
+
+
+.card-top {
+
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6f9ff;
+}
+
+
+.completed-card .card-top {
+
+  background: #f1fcf8;
+}
+
+
+.subject-area {
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.subject-area h3 {
+
+  margin: 0;
+  font-size: 24px;
+  color: #172d52;
+}
+
+
+
+.subject-area input[type="checkbox"] {
+
+  /* appearance: none; */
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid #9aa8bc;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  background: white;
+}
+
+
+.subject-area input[type="checkbox"]:checked {
+
+  background: #26b77e;
+  border-color: #26b77e;
+}
+
+
+.subject-area input[type="checkbox"]:checked::after {
+
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  left: 5px;
+  top: 0px;
+}
+
+
+
+
+.status {
+
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.status.pending {
+
+  background: #e8f0ff;
+  color: #3470d8;
+}
+
+
+.status.completed {
+
+  background: #dcf7ed;
+  color: #21976b;
+}
+
+
+
+
+.card-content {
+
+  padding: 18px 22px 12px;
+  min-height: 120px;
+}
+
+
+.card-content p {
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  color: #637593;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.card-content strong {
+
+  color: #536784;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+
+.info-icon svg {
+
+  stroke: #61789d;
+}
+
+
+.success-message {
+
+  color: #159467 !important;
+  font-weight: 700;
+
+}
+
+
+.card-buttons {
+
+  padding: 15px 22px;
+  background: #f7faff;
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+}
+
+
+/* .completed-card  */
+.card-buttons {
+
+  background: #f2fbf8;
+}
+
+
+.card-buttons button {
+
+  border: none;
+  border-radius: 7px;
+  padding: 11px 18px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-button {
+
+  background: #4e60df;
+}
+
+
+.delete-button {
+
+  background: #f34f5d;
+}
+
+
+.edit-button:hover {
+
+  background: #3e50cc;
+}
+
+
+.delete-button:hover {
+
+  background: #dc3d4b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .header {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .study-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .app {
+    padding: 10px;
+  }
+
+  .header-left {
+    gap: 10px;
+  }
+
+  .book-icon {
+    font-size: 40px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .study-form {
+    padding: 20px;
+  }
+
+  .study-list {
+    padding: 15px;
+  }
+
+  .card-top {
+    padding: 16px;
+  }
+
+  .subject-area h3 {
+    font-size: 20px;
+  }
+
+}
